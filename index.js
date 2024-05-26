@@ -6,11 +6,12 @@ require("dotenv").config();
 
 // server used to send send emails
 const app = express();
-app.use(
-  cors({
-    origin: "https://vishal-portfolio-hsbr.onrender.com/",
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://vishal-portfolio-hsbr.onrender.com/",
+//   })
+// );
+app.use(cors());
 app.use(express.json());
 app.use("/", router);
 app.listen(process.env.PORT || 5000, () => console.log("Server Running"));
